@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build: .
+    container_name: aprendizaje-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      # Todo el repo montado para abrir y editar los .ipynb
+      - .:/workspace
+    working_dir: /workspace
